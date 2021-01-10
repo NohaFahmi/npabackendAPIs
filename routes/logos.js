@@ -4,7 +4,7 @@ const Logo = require('../models/logos');
 const fs = require('fs');
 const multer = require('multer');
 const path = require('path');
-const dist = path.join(_dirname, '/public/assets/teams')
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'public/assets/teams')

@@ -31,6 +31,8 @@ app.use('/api/subscriptions', subscriptionRouter);
 app.use('/api/logos', logoRouter);
 
 app.get('/', (req, res, next) => res.sendFile(path.join(__dirname, 'index.html')));
+//serve images from public/assets
+app.use('/assets', express.static('./public/assets/'));
 
 // app.use(express.static('npateams/build'));
 app.use('/*', (req, res) => {
